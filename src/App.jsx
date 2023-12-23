@@ -1,92 +1,80 @@
-
-import React from "react";
-import Card from "./components/card";
+import React from 'react'
+import Card from './components/card'
 function App() {
-  let cardData = [
+ let data =[
     {
-      title: "Free",
-      monthPrice: "$0",
-      user: "Single User",
-      isUser:"true",
-      storage: "50GB Storage",
-      isStorage:"true",
-      project: "text-muted",
-      isProject:"true",
-      projectIcon: "fas fa-times",
-      isProjectIcon:"true",
-      phone: "tex-muted",
-      isPhone:"false",
-      phoneIcon: "fas fa-times",
-      isPhoneIcon:"false",
-      subdomain: "text-muted",
-      isSubdomain:"false",
-      subdomainIcon: "fas fa-times",
-      isSubdomainIcon:"false",
-      montlyStatus: "text-muted",
-      isMonthlyStatus:"false",
-      monthlyStatusIcon: "fas fa-times",
-      isMonthlyStatusIcon:"false",
-    },
-    {
-      title: "Plus",
-      monthPrice: "$9",
-      user: "5 Users",
-      isUser:"true",
-      storage: "50GB Storage",
-      isStorage:"true",
-      project: "",
-      isProject:"true",
-      projectIcon: "fas fa-check",
-      isProjectIcon:"true",
-      phone: "",
-      isPhone:"true",
-      phoneIcon: "fas fa-check",
-      isPhoneIcon:"true",
-      subdomain: "",
-      isSubdomain:"true",
-      subdomainIcon: "fas fa-check",
-      isSubdomainIcon:"true",
-      montlyStatus: "text-muted",
-      isMonthlyStatus:"false",
-      monthlyStatusIcon: "fas fa-times",
-      isMonthlyStatusIcon:"false",
-    },
-    {
-      title: "Pro",
-      monthPrice: "$49",
-      user: "Unlimited Users",
-      isUser:"true",
-      storage: "50GB Storage",
-      isStorage:"true",
-      project: "",
-      isProject:"true",
-      projectIcon: "fas fa-check",
-      isProjectIcon:"true",
-      phone: "",
-      isPhone:"true",
-      phoneIcon: "fas fa-check",
-      isPhoneIcon:"true",
-      subdomain: "",
-      isSubdomain:"true",
-      subdomainIcon: "fas fa-check",
-      isSubdomainIcon:"true",
-      montlyStatus: "",
-      isMonthlyStatus:"true",
-      monthlyStatusIcon: "fas fa-check",
-      isMonthlyStatusIcon:"false",
-    },
-  ];
-  return (
+        plan:"FREE",
+        price:0,
+        user:"Single User",
+        isUser:true,
+        storage:"5 GB",
+        isStorage:true,
+        publicProjects:"Unlimited Public Projects",
+        isPublicProjects:true,
+        communityAccess:"Community Access",
+        isCommunityAccess:true,
+        privateProjects:"Unlimited Private Projects",
+        isPrivateProjects:false,
+        phoneSupport:"Dedicated Phone Support",
+        isPhoneSupport:false,
+        subDomain:"Free Subdomain",
+        isSubDomain:false,
+        reports:"Monthly Status Reports",
+        isReports:false
+      },
+      {
+        plan:"PLUS",
+        price:9,
+        user:"5 Users",
+        isUser:true,
+        storage:"50 GB",
+        isStorage:true,
+        publicProjects:"Unlimited Public Projects",
+        isPublicProjects:true,
+        communityAccess:"Community Access",
+        isCommunityAccess:true,
+        privateProjects:"Unlimited Private Projects",
+        isPrivateProjects:true,
+        phoneSupport:"Dedicated Phone Support",
+        isPhoneSupport:true,
+        subDomain:"Free Subdomain",
+        isSubDomain:true,
+        reports:"Monthly Status Reports",
+        isReports:false
+      },
+      {
+        plan:"PRO",
+        price:49,
+        user:"Unlimited Users",
+        isUser:true,
+        storage:"150 GB",
+        isStorage:true,
+        publicProjects:"Unlimited Public Projects",
+        isPublicProjects:true,
+        communityAccess:"Community Access",
+        isCommunityAccess:true,
+        privateProjects:"Unlimited Private Projects",
+        isPrivateProjects:true,
+        phoneSupport:"Dedicated Phone Support",
+        isPhoneSupport:true,
+        subDomain:"Free Subdomains",
+        isSubDomain:true,
+        reports:"Monthly Status Reports",
+        isReports:true
+      }
+    ]
+    return <>
     <section className="pricing py-5">
-      <div className="container">
-        <div className="row">
-          {cardData.map((e, i) => {
-            return <Card data={e} key={i} />;
-          })}
-        </div>
+    <div className="container">
+      <div className="row">
+       {
+        data.map((e,i)=>{
+          return <Card data={e} key={i}/>
+        })
+       }
       </div>
-    </section>
-  );
-}
-
-export default App;
+    </div>
+  </section>
+    </>
+  }
+    export default App
